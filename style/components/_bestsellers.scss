@@ -1,0 +1,166 @@
+body {
+  .Product-Container {
+    @extend %containerWidth;
+    margin: 120px auto 0;
+
+    .product-content {
+    
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+      
+      }
+
+      @extend %containerWidth;
+
+      justify-content: space-between;
+
+      .headphone {
+        @media screen and (max-width: 1110px) {
+          width: 280px ;
+        }
+     
+        width: 350px;
+        background-color: $bestseller-bg-color;
+        text-align: center;
+        border-radius: 15px;
+
+        img {
+          @media screen and (max-width: 1110px) {
+            position: relative;
+            left: 0px;
+          }
+ 
+      
+          @extend %bestsellerImgSIze;
+          position: relative;
+          top: -40px;
+        }
+        p {
+          @extend %flex;
+
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 1.2;
+          padding-bottom: 20px;
+        }
+        .shop {
+          font-size: 13px;
+          font-weight: 600;
+          letter-spacing: 1px;
+
+          &:hover {
+            a {
+              color: $main-hover-color;
+            }
+          }
+          a {
+            color: #727171;
+          }
+          span {
+            color: #d87d4a;
+            font-size: 13px;
+            font-weight: 700;
+          }
+        }
+      }
+      .speaker {   
+           @media screen and (max-width: 1110px) {
+        width: 280px ;
+      }
+      @media screen and (max-width: 700px) {
+        margin: 70px 0px;
+      }
+        width: 350px;
+        background-color: $bestseller-bg-color;
+        border-radius: 15px;
+
+        img{
+          @media screen and (max-width: 1110px) {
+            position: relative;
+            left: 75px;
+          }
+ 
+          @extend %bestsellerImgSIze;
+          position: relative;
+          top: -40px;
+          left: 100px;
+        }
+        p {
+          @extend %flex;
+
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 1.2;
+          padding-bottom: 20px;
+        }
+
+        .shop {
+          font-size: 13px;
+          font-weight: 600;
+          letter-spacing: 1px;
+
+          &:hover {
+            a {
+              color: $main-hover-color;
+            }
+          }
+          a {
+            color: #727171;
+          }
+          span {
+            color: #d87d4a;
+            font-size: 13px;
+            font-weight: 700;
+          }
+        }
+      }
+      .earphones {
+        @media screen and (max-width: 1110px) {
+          width: 280px ;
+        }
+        width: 350px;
+        border-radius: 15px;
+        background-color: $bestseller-bg-color;
+
+        img {
+          @media screen and (max-width: 1110px) {
+            position: relative;
+            left: 65px;
+          }
+ 
+          @extend %bestsellerImgSIze;
+          position: relative;
+          top: -40px;
+          left: 100px;
+        }
+        p {
+          @extend %flex;
+
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 1.2;
+          padding-bottom: 20px;
+        }
+        .shop {
+          font-size: 13px;
+          font-weight: 600;
+          letter-spacing: 1px;
+
+          &:hover {
+            a {
+              color: $main-hover-color;
+            }
+          }
+          a {
+            color: #727171;
+          }
+          span {
+            color: #d87d4a;
+            font-size: 13px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

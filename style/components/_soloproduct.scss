@@ -1,0 +1,285 @@
+body{
+  background-color: #ffffff;
+
+
+.SoloProduct-Header-Container {
+  
+  @extend %maxWidth;
+  margin: 0 auto;
+  background-color: $secondary-bg-color;
+  height: 100px;
+
+  @media screen and (max-width:1110px) {
+    padding: 0px 50px;
+  }
+  .SoloProduct-Header-Navigation {
+    @include containerWidth(1110px);
+
+    background-color: $secondary-bg-color;
+    display: flex;
+    justify-content: space-between;
+
+    .SoloProduc-Logo {
+      &:hover {
+        .SoloLogoImg {
+          path {
+            fill: $main-hover-color;
+            transition: 400ms;
+          }
+        }
+      }
+      padding: 20px;
+    }
+    .SoloProduct-Navigation {
+      nav {
+        ul {
+          @media screen and (max-width: 800px) {
+            display: none;
+          }
+          display: flex;
+          *:not(:lastchild) {
+            margin-right: 50px;
+          }
+
+          li {
+            &:hover {
+              a {
+                color: $main-hover-color;
+              }
+            }
+            padding-right: 50px;
+            a {
+              color: $main-background-color;
+            }
+          }
+        }
+      }
+    }
+    .cart {
+      position: relative;
+      &:hover {
+        .CartImg {
+          path {
+            fill: $main-hover-color;
+            transition: 400ms;
+          }
+        }
+      }
+      padding: 30px;
+    }
+  }
+}
+.SoloProduct-Main-Container {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 100%;
+  
+
+  .go-back {
+    @media screen and (max-width:1110px) {
+      padding: 50px;
+    }
+    color: rgb(135, 131, 131);
+    padding-top: 60px;
+  }
+  a{
+    color: gray;
+  }
+  .SoloProduct-Container {
+    @media screen and (max-width: 700px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .SoloProduct-Info {
+      @media screen and (max-width:1110px) {
+        padding-top: 60px ;
+        text-align: center;
+      }
+      @media screen and (max-width:500px) {
+        padding-left: 40px ;
+        text-align: start;
+      }
+      
+      width: 445px;
+      padding: 40px 60px;
+      flex: 1;
+
+      .SoloProduct-Name {
+        @include SizesWeightsLines(40px, 700, 27px);
+      }
+      .SoloProduct-Type {
+        @include SizesWeightsLines(40px, 700, 50px);
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+      }
+      .SoloProduct-Description {
+        @include SizesWeightsLines(15px, 500, 10px);
+        color: rgb(122, 120, 120);
+      }
+      .SoloContainer-Price {
+        @include SizesWeightsLines(18px, 700, 10px);
+        margin: 40px 0px 47px;
+      }
+      input{
+      width: 120px;
+      height: 48px;
+      border: none; 
+      background-color: #F2F2F1;
+      text-align: center;
+      
+      }
+      #minus-Btn{
+        border: none;
+        position: relative;
+        left: 20px;
+      }
+      #plus-Btn{
+      border: none;
+      position: relative;
+      left: -20px;
+      }
+      #AddToCart-Btn{
+        @include SizesWeightsLines(13px,700,1px);
+        width: 160px;
+        height: 48px;
+        border: none;
+        background-color:$main-hover-color ;
+        color: $main-background-color;
+        margin-left: 15px;
+        
+      }
+
+    }
+  }
+  .mainImg {
+    flex: 1;
+  }
+}
+
+.SoloProduct-Features-Container {
+  @media screen and (max-width: 1000px) {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+  }
+  @extend %maxWidth;
+  margin: 0 auto;
+
+  .SoloProduct-Features-Title {
+    @include SizesWeightsLines(32px, 700, 3px);
+    padding: 100px 0px 60px 0px;
+  }
+  .SoloProduct-Features {
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+    @include SizesWeightsLines(15px, 400, 20px);
+    width: 635px;
+  }
+}
+
+.SoloProduct-Imgs {
+  @media screen and (max-width: 1000px) {
+    padding-left: 40px;
+  }
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+  @extend %maxWidth;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 150px;
+  .one {
+    @media screen and (max-width: 1000px) {
+      width: 380px;
+      height: 350px;
+    }
+    @media screen and (max-width: 800px) {
+      position: relative;
+      top: 30px;
+    }
+    @media screen and (max-width: 500px) {
+      position: relative;
+      left: -15px;
+    }
+    width: 445px;
+    height: 280px;
+    position: absolute;
+  }
+  .two {
+    @media screen and (max-width: 1000px) {
+      width: 380px;
+      height: 250px;
+      position: relative;
+      top: 40px;
+    }
+    @media screen and (max-width: 500px) {
+      position: relative;
+      left: -15px;
+    }
+   
+    width: 445px;
+    height: 280px;
+    position: absolute;
+    top: 300px;
+    left: 0px;
+  }
+  .three {
+    @media screen and (max-width: 1000px) {
+      width: 500px;
+      height: 520px;
+      position: relative;
+      left: 0px;
+      top: 50px;
+    }
+    @media screen and (max-width: 800px) {
+      padding: 0px;
+      position: relative;
+      top: 50px;
+    }
+    @media screen and (max-width: 500px) {
+      position: relative;
+      left: -30px;
+    }
+    width: 635px;
+    height: 592px;
+    position: absolute;
+    left: 460px;
+    top: 0px;
+  }
+}
+
+.popup {
+  border: 1px solid black;
+  background-color: white;
+  display: none;
+  z-index: 5;
+  position: absolute;
+  top: 100px;
+
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  display: none;
+  z-index: 1;
+}
+
+}

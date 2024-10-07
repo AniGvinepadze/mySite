@@ -1,0 +1,236 @@
+body {
+  @media screen and (max-width:900px) {
+    overflow-x: hidden;
+  }
+  header {
+    background-color: black;
+    .Header-Container {
+      @include containerWidth(1110px);
+      height: 100px;
+      background-color: $secondary-bg-color;
+
+      .header-content {
+        @media screen and (max-width:1110px) {
+          padding: 0px 40px;
+        }
+        @media screen and (max-width:500px) {
+          padding: 0px 30px;
+        }
+        @extend %containerWidth;
+        background-color: $secondary-bg-color;
+        display: flex;
+        justify-content: space-between;
+
+        .menu_btn {
+          @media screen and (max-width:900px) {
+            display: flex;
+          }
+          display: none;
+          align-items: center;
+          margin-right: 40px;
+          position: relative;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+          transform: all 0.5s ease-in-out;
+          .burger {
+            width: 16px;
+            height: 3px;
+            background-color: $main-background-color;
+            border-radius: 5px;
+            transition: all 0.5s ease-in-out;
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              width: 16px;
+              height: 3px;
+              background-color: $main-background-color;
+              border-radius: 5px;
+              transition: all 0.5s ease-in-out;
+            }
+            &::before {
+              transform: translateY(-6px);
+            }
+            &::after {
+              transform: translateY(6px);
+            }
+          }
+          &.open .burger {
+            transform: rotate(90deg);
+            background-color: transparent;
+            transition: all 0.5s ease-in-out;
+            &::before {
+              transform: rotate(45deg);
+            }
+            &::after {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+
+ 
+   
+
+    .logo {
+      
+      @media screen and (max-width:1110px) {
+        padding-right: 150px ;
+      }
+      @media screen and (max-width:700px) {
+        padding-right: 50px ;
+      }
+      &:hover {
+        .logoImg {
+          path {
+            fill: $main-hover-color;
+            transition: 400ms;
+          }
+        }
+      }
+      padding: 20px;
+    }
+    .navigation {
+      @media screen and (max-width:900px) {
+       display: none;
+      }
+      // @media screen and (max-width:700px) {
+      //   padding-right: 50px ;
+        
+      // }
+
+      nav {
+        ul {
+          // @media screen and (max-width:900px) {
+          //   display: none;
+          // }
+
+          display: flex;
+          *:not(:lastchild) {
+            margin-right: 50px;
+          }
+
+          li {
+            &:hover {
+              a {
+                color: $main-hover-color;
+              }
+            }
+            padding-right: 50px;
+            a {
+              color: $main-background-color;
+            }
+          }
+        }
+      }
+    }
+    .cart {
+
+      @media screen and (max-width:1110px) {
+        padding-right: 100px ;
+      }
+      
+      @media screen and (max-width:700px) {
+        padding-right: 50px ;
+      }
+      &:hover {
+        .cartImg {
+          path {
+            fill: $main-hover-color;
+            transition: 400ms;
+          }
+        }
+      }
+      padding: 30px;
+    }
+  }
+}
+}
+//     .mainoverlay{
+//       position: fixed;
+//       display: none;
+//       top: 0;
+//       left: 0;
+//       width: 100vw;
+//       height: 100vh;
+//       background-color: rgba(0, 0, 0, 0.5);
+//       z-index: 1;
+//     }
+//     .mainoverlay{
+//       &.active{
+//         display: block;
+//       }
+//     }
+//     .noScroll{
+//       overflow: hidden;
+//     }
+//   }
+  .undeline {
+    @extend %maxWidth;
+    margin: 0 auto;
+    background-color: #979797;
+    height: 1px;
+  }
+// }
+// }
+
+
+// .side-Bar {
+//   // display: none;
+// #Side-Bar-Content {
+//   background-color: black;
+//   position: absolute;
+//   width: 300px;
+//   height: 100vh;
+//   left: -300px;
+//   z-index: 7;
+//   padding-left: 4rem;
+//   transition: left 0.5s ease-in-out;
+
+//   @include responsive(phone) {
+//     width: 200px;
+//   }
+//   #Side-Bar-Navigation {
+//     nav {
+//       ul {
+//         margin-top: 10rem;
+//         display: flex;
+//         flex-direction: column;
+//         gap: 4rem;
+
+     
+//         a {
+//           text-decoration: none;
+//           color: $main-background-color;
+//           font-size: 1.8rem;
+//           font-weight: 700;
+//           line-height: 2.5rem;
+//           letter-spacing: 0.2rem;
+//           text-align: left;
+
+          
+//         }
+//       }
+//     }
+//   }
+// }
+// .active {
+//   left: 0px;
+// }
+// .overlay {
+//   position: absolute;
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: 6;
+//   backdrop-filter: blur(4px);
+// }
+// .overlay.hidden {
+//   display: none;
+// }
+// }
+
+
+// body.noScroll {
+// overflow: hidden;
+// }

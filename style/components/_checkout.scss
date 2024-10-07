@@ -1,0 +1,342 @@
+body {
+  background-color: #f1f1f1;
+  .SoloProduct-Header-Container {
+    @extend %maxWidth;
+    margin: 0 auto;
+    background-color: $secondary-bg-color;
+    height: 100px;
+
+    @media screen and (max-width: 1110px) {
+      padding: 0px 50px;
+    }
+    .SoloProduct-Header-Navigation {
+      @include containerWidth(1110px);
+
+      background-color: $secondary-bg-color;
+      display: flex;
+      justify-content: space-between;
+
+      .SoloProduc-Logo {
+        &:hover {
+          .SoloLogoImg {
+            path {
+              fill: $main-hover-color;
+              transition: 400ms;
+            }
+          }
+        }
+        padding: 20px;
+      }
+      .SoloProduct-Navigation {
+        nav {
+          ul {
+            @media screen and (max-width: 800px) {
+              display: none;
+            }
+            display: flex;
+            *:not(:lastchild) {
+              margin-right: 50px;
+            }
+
+            li {
+              &:hover {
+                a {
+                  color: $main-hover-color;
+                }
+              }
+              padding-right: 50px;
+              a {
+                color: $main-background-color;
+              }
+            }
+          }
+        }
+      }
+      .cart {
+        position: relative;
+        &:hover {
+          .CartImg {
+            path {
+              fill: $main-hover-color;
+              transition: 400ms;
+            }
+          }
+        }
+        padding: 30px;
+      }
+    }
+  }
+  .Go-back {
+    // padding: 50px 320px;
+    margin: 50px 330px;
+    a {
+      color: gray;
+    }
+  }
+  .checkout-Container {
+    width: 100%;
+    max-width: 730px;
+    height: 1400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 0 auto;
+
+    .checkout-Content {
+      padding: 45px;
+      .checkout {
+        h1 {
+          font-size: 32px;
+          font-weight: 600;
+          padding-bottom: 30px;
+        }
+      }
+      .name-email {
+        display: flex;
+        justify-content: space-evenly;
+        .name {
+          width: 310px;
+          height: 58px;
+        }
+        .email {
+          width: 310px;
+          height: 58px;
+        }
+      }
+      .number-input {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        .phone-number {
+          width: 310px;
+          height: 58px;
+        }
+      }
+
+      .address {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+      }
+      .zipcode-city {
+        display: flex;
+        justify-content: spa;
+        padding-top: 20px;
+        .zipcode-input {
+          width: 310px;
+          height: 58px;
+        }
+        .city-input {
+          width: 310px;
+          height: 58px;
+        }
+      }
+      .country {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        .country-input {
+          width: 310px;
+          height: 58px;
+        }
+      }
+      .payment {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+      }
+      .card {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0px;
+      }
+      .input-info {
+     display: flex;
+     flex-direction: column;
+
+      }
+      .cvv-expdate {
+        display: flex;
+        justify-content: space-evenly;
+        .exp{
+            width: 310px;
+            height: 58px;
+        }
+        .cvv{
+            width: 310px;
+            height: 58px;
+        }
+      }
+      input {
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid rgb(215, 213, 213);
+        margin: 10px 0px;
+      }
+      p {
+        color: $main-hover-color;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 15px 0px;
+      }
+      label {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 10 0px;
+      }
+    }
+  }
+
+  .Product-Footer-Container {
+    margin-top: 200px;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      height: 650px;
+    }
+    @extend %flex;
+    height: 365px;
+    background-color: $secondary-bg-color;
+    .Product-Footer-Content {
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        padding: 50px;
+      }
+      @media screen and (max-width: 830px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .Product-Footer-Navigation {
+        @include containerWidth(1110px);
+        justify-content: space-around;
+        @media screen and (max-width: 830px) {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding-top: 60px;
+        }
+        @media screen and (max-width: 700px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        &:hover {
+          .p-f-logo {
+            path {
+              fill: $main-hover-color;
+              transition: 400ms;
+            }
+          }
+        }
+        .p-f-logo {
+          @media screen and (max-width: 830px) {
+            margin: 20px 400px 30px 0px;
+          }
+
+          @media screen and (max-width: 800px) {
+            margin-left: 100px;
+          }
+          @media screen and (max-width: 700px) {
+            padding-left: 400px;
+          }
+          padding-right: 100px;
+          cursor: pointer;
+        }
+        nav {
+          @media screen and (max-width: 1000px) {
+            width: 100%;
+            padding-left: 40px;
+          }
+
+          padding-left: 200px;
+          ul {
+            @media screen and (max-width: 700px) {
+              display: flex;
+              flex-direction: column;
+            }
+            display: flex;
+            *:not(:lastchild) {
+              padding-right: 50px;
+            }
+            li {
+              @media screen and (max-width: 700px) {
+                padding-top: 20px;
+              }
+              padding-right: 50px;
+              &:hover {
+                a {
+                  color: $main-hover-color;
+                }
+              }
+              a {
+                color: $main-background-color;
+              }
+            }
+          }
+        }
+      }
+      .Product-Footer-personal-info {
+        @media screen and (max-width: 830px) {
+          padding-left: 35px;
+          width: 100%;
+        }
+        @media screen and (max-width: 700px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        width: 365px;
+        p {
+          font-size: 15px;
+          font-weight: 400;
+          padding: 36px 0px 56px 0px;
+          color: $footer-text-color;
+        }
+        span {
+          font-size: 15px;
+          font-weight: 700;
+          color: $footer-text-color;
+        }
+      }
+      .Product-Social-Adress-Container {
+        @media screen and (max-width: 830px) {
+          padding-top: 100px;
+        }
+        @media screen and (max-width: 700px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // margin: 00px -60px 50px 70px;
+          position: relative;
+          top: 400px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+
+        &:hover {
+          svg {
+            color: $main-hover-color;
+          }
+        }
+        svg {
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+          margin-right: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

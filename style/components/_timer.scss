@@ -1,0 +1,59 @@
+.Timer-Container {
+  @extend %maxWidth;
+  margin: 0 auto;
+
+  .Timer-Container-Title {
+     @media screen and (max-width:1110px) {
+     padding-left: 50px;
+     }
+    @extend %maxWidth;
+
+    span {
+      @include SizesWeightsLines(48px, 900, 65px);
+    }
+  }
+
+  .Timer-Content {
+    @media  screen and (max-width: 1000px){
+      display: grid;
+      grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+
+      gap: 20px;
+      margin-left: 50px;
+    }
+    @media  screen and (max-width: 700px){
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding-left: 130px;
+
+    }
+    @media screen and (max-width:550px) {
+      padding-left: 60px;
+    }
+
+   @include containerWidth(1110px);
+   justify-content: space-between;
+   margin: 50px 0px 100px;
+
+   .Timer-Content-Days{
+    @include TimerBoxSize;
+   }
+   .Timer-Content-Hours{
+    @include TimerBoxSize;
+   }
+    .Timer-Content-Minutes{
+    @include TimerBoxSize;
+   }
+    .Timer-Content-Seconds{
+    @include TimerBoxSize;
+   }
+   p{
+    @include SizesWeightsLines(64px,900,1px);
+   }
+   span{
+    padding-top: 50px;
+   }
+  }
+  
+}

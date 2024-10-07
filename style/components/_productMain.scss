@@ -1,0 +1,97 @@
+.Main-Product-Container-two {
+  @extend %maxWidth;
+  margin: 0 auto;
+ 
+
+  .Product-Container {
+    @media screen and (max-width: 1110px) {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      &:not(:last-child){
+        .Container{
+          flex-direction: column-reverse !important;
+        }
+      }
+      &:last-child{
+        .Container{
+          flex-direction: column-reverse !important;
+        }
+      }
+    }
+    &:not(:last-child){
+      .Container{
+        flex-direction: row-reverse ;
+      }
+    }
+  }
+  .Container {
+    @media screen and (max-width:1110px){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      
+     
+     }
+    
+    // @include containerWidth(1110px);
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+
+    .Product-Info {
+      @media screen and (max-width:1110px) {
+        padding-top: 60px;
+      }
+      width: 445px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;  
+      h2 {
+        @include SizesWeightsLines(40px, 700, 16px);
+        letter-spacing: 2px;
+        margin-bottom: 32px;
+      }
+      span {
+        @include SizesWeightsLines(15px, 500, 20px);
+        margin-bottom: 42px;
+        color: rgb(67, 66, 66);
+      }
+      button {
+        width: 160px;
+        height: 48px;
+        background-color: $main-hover-color;
+        border: 1px solid $main-hover-color;
+        color: $main-background-color;
+      }
+    }
+  }
+}
+.Main-Btn {
+  @extend %flex;
+  margin: 200px auto;
+
+  #Previous-Btn {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    border-radius: 4px;
+    margin-right: 20px;
+  }
+  #Next-Btn {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+
+    border-radius: 4px;
+  }
+}
+

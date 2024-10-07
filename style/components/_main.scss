@@ -1,0 +1,137 @@
+.Main-Content-Container {
+  @media screen and (max-width:1110px) {
+    padding: 0px 30px ;
+
+  }
+  @media screen and (max-width:600px) {
+    padding: 0px 30px ;
+    
+  }
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $secondary-bg-color;
+  .Content-Container {
+    @media screen and (max-width:930px) {
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      
+    }
+    @media screen and (max-width: 760px) {
+      padding-right: 50px;
+    }
+    @media screen and (max-width: 620px) {
+      padding-right: 50px;
+    }
+    @media screen and (max-width: 550px) {
+      padding: 50px;
+    }
+    @include containerWidth(1110px);
+    padding-left: 140px;
+    color: $main-background-color;
+
+    .Info {
+      // @media screen and (max-width:700px) {
+      //   position: absolute;
+      //    top: 100px;
+      //   justify-content: center;
+      //   text-align: center;
+      //   align-items: center;
+      //   flex: 1;
+      //   margin-right: 0px;
+      //   z-index:2;
+      //  padding: 50px 0px 100px;
+
+      // }
+
+      // width: 398px;
+      width: 100%;
+      flex: 0.5;
+      display: flex;
+      flex-direction: column;
+      margin-right: 30px;
+
+      @media screen and (max-width:930px) {
+        position: absolute;
+        flex:1;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        z-index: 2;
+        padding: 0px 20px;
+        
+      }
+      
+
+      .newproduct {
+        // flex: 1;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 10px;
+        color: rgb(120, 120, 120);
+        padding-bottom: 24px;
+    
+      }
+      h2 {
+        @media screen and (max-width:1110px) {
+          font-size: 40px;
+          
+        }
+        @media screen and (max-width:900px) {
+          font-size: 34px;
+          
+        }
+        @media screen and (max-width:700px) {
+          font-size: 50px;
+          
+        }
+        @media screen and (max-width:500px) {
+          font-size: 34px;
+          
+        }
+        font-size: 56px;
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+      p {
+        width: 300px;
+        font-size: 15px;
+        font-weight: 300;
+        color: #8d8888;
+        padding: 24px 0px 40px 0px;
+      }
+      button {
+        width: 160px;
+        height: 48px;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border: 1px solid $secondary-bg-color;
+        background-color: #d87d4a;
+
+        a {
+          color: $main-background-color;
+        }
+      }
+    }
+    .Headphones-img {
+      flex: 0.5;
+      @media screen and (max-width: 930px) {
+        @include flexContainer(center, center);
+        flex: 1;
+        opacity: 0.5;
+        padding: 0px 50px;
+        // position: relative;
+        // z-index: 1;
+        // overflow-x: hidden;
+        // position: absolute;
+        // top: 100px;
+      }
+    
+  }
+}
+}
